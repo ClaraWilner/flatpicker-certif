@@ -1,0 +1,8 @@
+<h1><%= @movie.title %> </h1>
+<%= link_to "Réserver", new_movie_reservation_path(@movie) %>
+<h2>Reservations</h2>
+<ul>
+  <% @reservations.each do |reservation| %>
+    <li><%= reservation.start_date %></li>
+  <% end %>
+</ul>
