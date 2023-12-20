@@ -1,6 +1,7 @@
 class Reservation < ApplicationRecord
   belongs_to :movie
   validates :start_date, :end_date, presence: true
+  has_one_attached :photo
 
   # validate :expiration_date_validation
 
